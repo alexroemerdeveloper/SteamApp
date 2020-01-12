@@ -8,9 +8,38 @@
 
 import SwiftUI
 
+// sample data.....
+
+var top    = ["Card1","Card2"]
+var middle = ["m1","m2","m3"]
+var bottom = ["b1","b2","b3"]
+var detail = ["d1","d2"]
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        TabView {
+            
+            Home().tabItem {
+                Image("home")
+            }
+            
+            Text("Search").tabItem {
+                Image("search")
+            }
+            
+            Text("Person").tabItem {
+                Image("person")
+            }
+            
+            Text("Menu").tabItem {
+                Image("menu")
+            }
+    
+        }
+        .accentColor(.white)
+        .preferredColorScheme(.dark)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
